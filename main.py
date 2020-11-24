@@ -54,7 +54,7 @@ def authorize(client_id):
 
     options = Options()
     options.headless = True
-    with Firefox(options=options, service_log_path=None, executable_path=) as driver:
+    with Firefox(options=options, service_log_path=None, executable_path=gecko_path) as driver:
         driver.get('https://vk.com')
         for key, value in cookies.items():
             driver.add_cookie({'name': key, 'value': value})
